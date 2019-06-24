@@ -1,0 +1,42 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=production node server/server.js",
+    "build": "cross-env NODE_ENV=production webpack",
+    "dev": "cross-env NODE_ENV=development concurrently \"nodemon server/server.js\" \"webpack-dev-server --open\""
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "build",
+      "client"
+    ]
+  },
+  "author": "CodesmithLLC https://github.com/CodesmithLLC <hello@codesmith.io>",
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^0.28.11",
+    "express": "^4.12.3",
+    "prop-types": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.3.1",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.29.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "acorn": "^6.1.1",
+    "babel-loader": "^8.0.5",
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
+    "isomorphic-fetch": "^2.2.1",
+    "nodemon": "^1.18.9",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.1"
+  }
+}
